@@ -10,4 +10,4 @@ output_file="missingLangTags.txt"
 > "$output_file"
 
 # Dateien suchen, die die Endungen .mkv, .mp4 oder .avi haben und kein "@" oder "[" enthalten
-grep -rE --exclude='*@*' --exclude='*[*' --exclude-dir='*@*' --exclude-dir='*[*' -l '(mkv|mp4|avi)' >> "$output_file"
+grep -r --exclude='*@*' --exclude='*[*' --exclude-dir='*@*' --exclude-dir='*[*' -l -e mkv -e mp4 -e avi >> "$output_file"
